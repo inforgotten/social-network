@@ -1,6 +1,8 @@
+import styles from './Profile.module.css'
+
 const Profile = () => {
   return (
-    <div className='content'>
+    <div className={styles.content}>
       <div>
         <img
           src="https://c4.wallpaperflare.com/wallpaper/994/938/405/anime-manga-anime-girls-simple-background-wallpaper-preview.jpg"
@@ -22,7 +24,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Profile;
+export default Profile
