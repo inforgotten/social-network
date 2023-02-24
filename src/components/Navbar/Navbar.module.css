@@ -1,9 +1,14 @@
-.navbar {
+nav {
   grid-area: navbar;
   background-color: darkgrey;
+  padding: 20px;
 }
 
-.item {
+.item a {
   text-decoration: none;
   color: white;
+}
+
+.item a.active {
+  color: gold;
 }
