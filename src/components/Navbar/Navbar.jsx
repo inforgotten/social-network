@@ -1,7 +1,7 @@
 import styles from './Navbar.module.css'
 import { NavLink } from 'react-router-dom'
 
-const setActive = ({isActive}) => isActive ? styles.active : styles.item
+const setActive = ({ isActive }) => isActive ? styles.active : styles.item
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
         <NavLink to='/profile' className={setActive}>Profile</NavLink>
       </div>
       <div className={styles.item}>
-        <NavLink to='/messages' className={setActive}>Messages</NavLink>
+        <NavLink to='/dialogs' className={setActive}>Dialogs</NavLink>
       </div>
       <div className={styles.item}>
         <NavLink to='/news' className={setActive}>News</NavLink>
