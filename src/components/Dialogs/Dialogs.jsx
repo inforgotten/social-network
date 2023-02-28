@@ -1,43 +1,11 @@
-import { NavLink } from 'react-router-dom'
+import DialogItem from './DialogItem/DialogItem'
 import styles from './Dialogs.module.css'
-
-const DialogItem = (props) => {
-  const path = '/dialogs/' + props.id
-
-  return (
-    <div className={styles.dialog}>
-      <NavLink to={path}>{props.name}</NavLink>
-    </div>
-  )
-}
-
-const Message = (props) => {
-  return (
-    <div className={styles.message}>{props.message}</div>
-  )
-}
+import Message from './Message/Message'
 
 const Dialogs = (props) => {
 
-  const dialogsData = [
-    { id: 1, person: 'Sinji' },
-    { id: 2, person: 'Asuka' },
-    { id: 3, person: 'Rei' },
-    { id: 4, person: 'Misato' }
-  ]
-
-  const messages = [
-    { id: 1, message: 'Hi' },
-    { id: 2, message: 'How are you?' },
-    { id: 3, message: 'I love you!' }
-  ]
-
-  const dialogsElements = dialogsData
-    .map(el => <DialogItem name={el.person} id={el.id} />)
-
-
-  const messagesElements = messages
-    .map(el => <Message message={el.message} id={el.id} />)
+  const dialogsElements = props.dialogsData.map(el => <DialogItem name={el.person} id={el.id} />)
+  const messagesElements = props.messages.map(el => <Message message={el.message} id={el.id} />)
 
   return (
     <div className={styles.dialogs}>
